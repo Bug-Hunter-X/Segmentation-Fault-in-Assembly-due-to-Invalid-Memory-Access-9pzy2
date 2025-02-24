@@ -1,0 +1,3 @@
+# Assembly Memory Access Bug
+
+This repository demonstrates a common bug in assembly language programming: accessing memory outside the allocated address space. The bug is caused by the instruction `mov eax, [ebx+esi*4]`, which attempts to access memory at an address calculated from registers `ebx` and `esi`. If this calculated address falls outside the program's memory limits, a segmentation fault will occur.  The solution demonstrates how to add bounds checking to prevent this.
